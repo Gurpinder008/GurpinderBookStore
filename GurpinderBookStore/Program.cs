@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GurpinderBookStore
+namespace GurpinderBookStore.DataAccess.Data
 {
     public class Program
     {
