@@ -1,11 +1,12 @@
 ﻿using GurpindersBooks.DataAccess.Repository.IRepository;
 using GurpinderBookStore.DataAccess.Data;
-using Dapper; 
+using Dapper;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
 using System.Text;
-
 
 namespace GurpindersBooks.DataAccess.Repository
 {
@@ -28,38 +29,32 @@ namespace GurpindersBooks.DataAccess.Repository
             _db.Dispose();
         }
 
-
         public void Execute(string procedureName, DynamicParameters param = null)
         {
-
             using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
             {
-
                 sqlCon.Open();
                 sqlCon.Execute(procedureName, param, commandType: System.Data.CommandType.StoredProcedure);
             }
         }
-
 
         public IEnumerable<T> List<T>(string procedureName, DynamicParameters param = null)
         {
             using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
             {
                 sqlCon.Open();
-
                 return sqlCon.Query<T>(procedureName, param, commandType: System.Data.CommandType.StoredProcedure);
             }
         }
-        public Tuple<IEnumerable<T1>, IEnumerable<T2>> List<T1, T2>(string procedurename, DynamicParameters param = null)
+
+        public Tuple<IEnumerable<T1>, IEnumerable<T2>> List<T1, T2>(string procedureName, DynamicParameters param = null)
         {
             using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
             {
                 sqlCon.Open();
-
                 var result = SqlMapper.QueryMultiple(sqlCon, procedureName, param, commandType: System.Data.CommandType.StoredProcedure);
 
-                var item1 = result.Read<T1>().ToList(); // make sure to add using statement for LINQ
-
+                var item1 = result.Read<T1>().ToList();
                 var item2 = result.Read<T2>().ToList();
 
                 if (item1 != null && item2 != null)
@@ -74,27 +69,17 @@ namespace GurpindersBooks.DataAccess.Repository
         {
             using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
             {
-
                 sqlCon.Open();
-
                 var value = sqlCon.Query<T>(procedureName, param, commandType: System.Data.CommandType.StoredProcedure);
-
                 return (T)Convert.ChangeType(value.FirstOrDefault(), typeof(T));
-
             }
         }
 
-
-
         public T Single<T>(string procedureName, DynamicParameters param = null)
-
         {
             using (SqlConnection sqlCon = new SqlConnection(ConnectionString))
-
             {
-
                 sqlCon.Open();
-
                 return (T)Convert.ChangeType(sqlCon.ExecuteScalar<T>(procedureName, param, commandType: System.Data.CommandType.StoredProcedure), typeof(T));
             }
         }
