@@ -1,4 +1,7 @@
 //using GurpinderBookStore.Data;
+using GurpindersBooks.DataAccess.Repository;
+using GurpindersBooks.DataAccess.Repository.IRepository;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;

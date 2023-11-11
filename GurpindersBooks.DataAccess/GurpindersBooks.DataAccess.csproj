@@ -14,12 +14,11 @@
 
 	<ItemGroup>
 		<Folder Include="Data\" />
-		<Folder Include="Repository\IRepository" />
 	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\GurpindersBooks.Models\GurpindersBooks.Models.csproj" />
-    <ProjectReference Include="..\GurpindersBooks.Utility\GurpindersBooks.Utility.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\GurpindersBooks.Models\GurpindersBooks.Models.csproj" />
+	  <ProjectReference Include="..\GurpindersBooks.Utility\GurpindersBooks.Utility.csproj" />
+	</ItemGroup>
 
 </Project>

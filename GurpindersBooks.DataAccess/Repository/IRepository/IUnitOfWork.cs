@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GurpindersBooks.DataAccess.Repository.IRepository
 {
-    interface UnitOfWork : IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         ICategoryRepository Category { get; }
 
