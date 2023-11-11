@@ -1,10 +1,8 @@
 ﻿using GurpindersBooks.DataAccess.Repository.IRepository;
 using GurpindersBooks.Models;
 using GurpinderBookStore.DataAccess.Data;
-
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 
