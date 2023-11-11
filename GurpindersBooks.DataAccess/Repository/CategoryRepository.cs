@@ -18,7 +18,7 @@ namespace GurpindersBooks.DataAccess.Repository
 
         public void Update(Category category)
         {
-            var objFromDb = _db.Categories.FirstOrDefault(s => s.Id == category.Id);
+            var objFromDb = _db.Categories.FirstOfDefault(s => s.id == category.Id);
             if (objFromDb != null)
             {
                 objFromDb.Name = category.Name;
