@@ -64,7 +64,6 @@ namespace GurpinderBookStore.Areas.Admin.Controllers
         }
 
         //api calls
-
         #region API CALLS
         [HttpGet]
         public IActionResult GetAll()
