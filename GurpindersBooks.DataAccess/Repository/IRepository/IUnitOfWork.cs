@@ -9,5 +9,8 @@ namespace GurpindersBooks.DataAccess.Repository.IRepository
         ICategoryRepository Category { get; }
 
         ISP_Call SP_Call { get; }
+        object save { get; }
+
+        void Save();
     }
 }
