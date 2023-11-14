@@ -62,7 +62,21 @@ Build the project
 
 6:26
   Create the migration Named as add-migration AddDefaultIdentityMigration
-  Use nuget package
+  Use nuget package manager console
+  change default project to .DataAccess
+
+  update database
+  review table
+  add new category
+  re run the app
+  error of duplication: delete adddefaultidentitymigrations
+
+  agian run the command add-migration
+  update database
+  run the application
+  run succesfully
+  
+  
   
 
   
