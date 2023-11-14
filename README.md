@@ -75,7 +75,43 @@ Build the project
   update database
   run the application
   run succesfully
-  
+
+7:14
+  start 2.2 Repository
+  create repo folder
+  irepo folder
+
+8:55 complete 2.2 part run the application 
+  successfully run
+
+************ DATE: 10-11-203 TIME: 11:00 **************
+
+check the application
+run the appp successfully run
+
+ADD sp_call files and isp_files
+update repo
+
+********** Date: 13-11-2023 Time: 11:28*********
+11:38run the app
+      face the problem of database
+      add using statement in applicationdbcontext
+      update database
+
+12:34  now showing no data
+
+12:39 now try to add the category 
+ successfully added
+
+ 3:00 try to work with layout and edit and delete button
+      do changes in category.cs
+
+
+    test the application succesfully run
+
+    commit to github 
+
+
   
   
 
