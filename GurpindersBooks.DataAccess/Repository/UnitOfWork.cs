@@ -3,6 +3,9 @@ using GurpinderBookStore.DataAccess.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
+
 
 namespace GurpindersBooks.DataAccess.Repository
 {
@@ -18,10 +21,13 @@ namespace GurpindersBooks.DataAccess.Repository
 
             Category = new CategoryRepository(_db);
 
+            CoverType = new CoverTypeRepository(_db);
+
             SP_Call = new SP_Call(_db);
         }
 
         public ICategoryRepository Category { get; private set; }
+        public ICoverTypeRepository CoverType { get; private set; }
 
         public ISP_Call SP_Call { get; private set; }
 
