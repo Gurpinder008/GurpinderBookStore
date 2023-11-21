@@ -5,12 +5,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
+
 
 namespace GurpindersBooks.DataAccess.Repository
 {
     public class CoverTypeRepository : Repository<CoverType>, ICoverTypeRepository
     {
-
         private readonly ApplicationDbContext _db;
         public CoverTypeRepository(ApplicationDbContext db) : base(db)
         {
@@ -29,5 +30,3 @@ namespace GurpindersBooks.DataAccess.Repository
 
     }
 }
-    
-

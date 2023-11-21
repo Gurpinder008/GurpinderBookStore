@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace GurpindersBooks.DataAccess.Repository.IRepository
 {
@@ -10,7 +12,6 @@ namespace GurpindersBooks.DataAccess.Repository.IRepository
         ICoverTypeRepository CoverType { get; }
 
         ISP_Call SP_Call { get; }
-        object save { get; }
 
         void Save();
     }
