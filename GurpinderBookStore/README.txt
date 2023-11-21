@@ -112,4 +112,78 @@ update repo
     commit to github 
 
 
-*********** Assignment 3 ****************
+*********** Assignment 3 ***********
+Start assignmenrt3
+
+Firstly i went to the restroom to fresh ;)
+After that i satrt my assignment 
+
+11/20/2023
+
+7:10PM
+Part 3 Section1
+Create file CoverType.cs in .models
+Add migartion
+
+
+7:40PM
+do repository step by following the category part of part2
+
+7:57PM
+Add covertype in the unitofwork and iunitofwork
+
+8:13PM
+CoverTypeController added same as category{20231121144439_AddCoverTypeToDb.cs}
+
+8:35PM
+Add covertype in layout, index in covertype folder, add covertype.js
+
+8:43PM
+Add Upsert and now going to run the application.
+
+
+
+21-11-2023
+
+9:45
+Previouslyyy in the starting I just build the project
+add a new class named as product.cs
+also add the add the code to build the blueprint of this class
+Also getting sure that this one is in public not the private one
+-------------------------------------------------------------------------
+10:11
+Follow the instructs and your slides one by one
+adding reference to product in the applicationDbContext.cs
+
+10:23
+after that in Package manager console, run the add-migration command
+and addProductToDb
+--------------------------------------------------------------------
+[20231121162103_AddProductToDb.cs]
+adding timestamp as usual:)
+------------------------------
+
+10:45
+also check the sqlobjectexplorer
+
+----------------------------------------------
+11:45
+Create a new migration,before creating this, I update my product class
+---------------------------------------------------------
+adding validationToProduct and update the database
+
+12:13
+--------------------------------------------
+adding product to the repository
+adding product to to UnitOfWork and IUnitOfWork
+Build it and check all the errors before running:)))))))))))))
+
+
+
+1:06 
+add readme
+
+
+
+
+
