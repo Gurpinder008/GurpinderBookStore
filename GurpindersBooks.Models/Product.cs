@@ -10,6 +10,8 @@ namespace GurpindersBooks.Models
 {
     public class Product
     {
+        public object Name;
+
         [Key]
         public int Id { get; set; }
         [Required]
@@ -31,7 +33,7 @@ namespace GurpindersBooks.Models
 
         [Required]
         public int CoverTypeId { get; set; }
-        [ForeignKey("CoverTypeId")]
+        [ForeignKey("CategoryId")]
         public CoverType CoverType { get; set; }
 
     }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace GurpindersBooks.DataAccess.Repository.IRepository
@@ -10,7 +10,7 @@ namespace GurpindersBooks.DataAccess.Repository.IRepository
     {
         ICategoryRepository Category { get; }
         ICoverTypeRepository CoverType { get; }
-
+        IProductRepository Product { get; }
         ISP_Call SP_Call { get; }
 
         void Save();

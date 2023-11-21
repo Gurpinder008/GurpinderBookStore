@@ -9,19 +9,19 @@ using System.Threading.Tasks;
 
 namespace GurpindersBooks.DataAccess.Repository
 {
-    public class CoverTypeRepository : Repository<CoverType>, ICoverTypeRepository
+    public class ProductRepository : Repository<Product>, IProductRepository
     {
         private readonly ApplicationDbContext _db;
-        public CoverTypeRepository(ApplicationDbContext db) : base(db)
+        public ProductRepository(ApplicationDbContext db) : base(db)
         {
             _db = db;
         }
-        public void Update(CoverType covertype)
+        public void Update(Product product)
         {
-            var objFromDb = _db.CoverTypes.FirstOrDefault(s => s.Id == covertype.Id);
+            var objFromDb = _db.Products.FirstOrDefault(s => s.Id == product.Id);
             if (objFromDb != null)
             {
-                objFromDb.Name = covertype.Name;
+                objFromDb.Name = product.Name;
                 // _db.SaveChanges();
             }
         }
