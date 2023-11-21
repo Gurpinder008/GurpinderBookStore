@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.33801.447
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GurpinderBookStore", "GurpinderBookStore\GurpinderBookStore.csproj", "{174242CB-7DD4-4C10-A431-4EEA2EEE4409}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GurpindersBooks.DataAccess", "GurpindersBooks.DataAccess\GurpindersBooks.DataAccess.csproj", "{66C5C0BC-FE94-4018-9C2B-D588E150F2B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GurpindersBooks.DataAccess", "GurpindersBooks.DataAccess\GurpindersBooks.DataAccess.csproj", "{66C5C0BC-FE94-4018-9C2B-D588E150F2B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GurpindersBooks.Models", "GurpindersBooks.Models\GurpindersBooks.Models.csproj", "{EE7A8A7F-9884-4403-AF58-35E59F7E4B9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GurpindersBooks.Models", "GurpindersBooks.Models\GurpindersBooks.Models.csproj", "{EE7A8A7F-9884-4403-AF58-35E59F7E4B9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GurpindersBooks.Utility", "GurpindersBooks.Utility\GurpindersBooks.Utility.csproj", "{D5B746EC-0BC7-4CC2-B444-9F487A941F60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GurpindersBooks.Utility", "GurpindersBooks.Utility\GurpindersBooks.Utility.csproj", "{D5B746EC-0BC7-4CC2-B444-9F487A941F60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
