@@ -73,7 +73,7 @@ namespace GurpinderBookStore.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        /**public IActionResult Upsert(Product product)
+        public IActionResult Upsert(Product product)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace GurpinderBookStore.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
-        }**/
+        }
 
 
         //api calls
