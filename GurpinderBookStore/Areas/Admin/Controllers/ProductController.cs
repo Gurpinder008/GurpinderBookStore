@@ -1,11 +1,13 @@
 ﻿using GurpindersBooks.DataAccess.Repository.IRepository;
 using GurpindersBooks.Models;
+using GurpindersBooks.Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GurpinderBookStore.Areas.Admin.Controllers
 {
@@ -28,7 +30,33 @@ namespace GurpinderBookStore.Areas.Admin.Controllers
 
         public IActionResult Upsert(int? id)
         {
-            Product product = new Product();
+            ProductVM productVM = new ProductVM()
+            {
+                Product = new Product(),
+                CategoryList = _unitOfWork.Category.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                }),
+                CoverTypeList = _unitOfWork.CoverType.GetAll().Select(i => new SelectListItem
+                {
+                    Text = i.Name,
+                    Value = i.Id.ToString()
+                }),
+
+            };
+           if(id== null)
+            {
+                return View(productVM);
+            }
+            productVM.Product = _unitOfWork.Product.GeT(id.GetValueOrDefault());
+            if(productVM.product == null)
+            {
+                return NotFound();
+            }
+            return View(productVM);
+                
+                /**Product product = new Product();
             if (id == null)
             {
                 return View(product);
@@ -39,13 +67,13 @@ namespace GurpinderBookStore.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            return View(product);
+            return View(product);**/
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
 
-        public IActionResult Upsert(Product product)
+        /**public IActionResult Upsert(Product product)
         {
             if (ModelState.IsValid)
             {
@@ -62,7 +90,7 @@ namespace GurpinderBookStore.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
-        }
+        }**/
 
 
         //api calls
@@ -70,7 +98,7 @@ namespace GurpinderBookStore.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var allObj = _unitOfWork.Product.GetAll();
+            var allObj = _unitOfWork.Product.GetAll(includeProperties: "Category, CoverType");
             return Json(new { data = allObj });
         }
         #endregion
