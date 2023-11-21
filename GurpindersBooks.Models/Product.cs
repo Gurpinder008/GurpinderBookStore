@@ -10,7 +10,7 @@ namespace GurpindersBooks.Models
 {
     public class Product
     {
-        public object Name;
+        
 
         [Key]
         public int Id { get; set; }

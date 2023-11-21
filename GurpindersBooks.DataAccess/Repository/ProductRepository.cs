@@ -21,9 +21,22 @@ namespace GurpindersBooks.DataAccess.Repository
             var objFromDb = _db.Products.FirstOrDefault(s => s.Id == product.Id);
             if (objFromDb != null)
             {
-                objFromDb.Name = product.Name;
-                // _db.SaveChanges();
+                if (product.ImageUrl != null)
+                {
+                    objFromDb.ImageUrl = product.ImageUrl;
+                    // _db.SaveChanges();
+
+                }
+                objFromDb.Title = product.Title;
+                objFromDb.Description = product.Description;
+                objFromDb.ISBN = product.ISBN;
+                objFromDb.Author = product.Author;
+                objFromDb.ListPrice = product.ListPrice;
+                objFromDb.CategoryId = product.CategoryId;
+                objFromDb.CoverTypeId = product.CoverTypeId;
+
             }
+
         }
     }
 }

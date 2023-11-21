@@ -1,5 +1,6 @@
 ﻿using GurpindersBooks.DataAccess.Repository.IRepository;
 using GurpindersBooks.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,13 @@ namespace GurpinderBookStore.Areas.Admin.Controllers
     public class ProductController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IWebHostEnvironment _hostEnvironment;
+    
 
-        public ProductController(IUnitOfWork unitOfWork)
+        public ProductController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
         {
             _unitOfWork = unitOfWork;
+            _hostEnvironment = hostEnvironment;
         }
         public IActionResult Index()
         {
@@ -27,7 +31,7 @@ namespace GurpinderBookStore.Areas.Admin.Controllers
             Product product = new Product();
             if (id == null)
             {
-                return View();
+                return View(product);
             }
 
             product = _unitOfWork.Product.Get(id.GetValueOrDefault());
