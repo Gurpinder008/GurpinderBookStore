@@ -198,6 +198,13 @@ change from categoryid to covertypeid
 1:11
 change the name space in application db 
 
+1:25 
+re run the migration of covertype
+update database
+see table but table didnot cerated
+
+1:29
+update readme
 
 
 
