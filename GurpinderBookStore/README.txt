@@ -184,6 +184,20 @@ Build it and check all the errors before running:)))))))))))))
 add readme
 
 
+------------28-11-2023-----------
+12:44 
+run the project : error in covertype 
+
+12:49
+start review files with provided files of bulkybooks
+
+1:07 
+update the foriegn key in product 
+change from categoryid to covertypeid
+
+1:11
+change the name space in application db 
+
 
 
 
