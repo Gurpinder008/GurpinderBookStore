@@ -15,8 +15,8 @@ namespace GurpinderBookStore.DataAccess.Data
         }
 
         public DbSet<Category> Categories { get; set; }
-
         public DbSet<CoverType> CoverTypes { get; set; }
+
         public DbSet<Product> Products { get; set; }
     }
 }
